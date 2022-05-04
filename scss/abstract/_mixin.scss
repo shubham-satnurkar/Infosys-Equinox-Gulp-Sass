@@ -1,0 +1,29 @@
+@mixin flexbox {
+    display: flex;justify-content: flex-start;
+    align-items: center; flex-wrap: wrap;
+    flex-direction: row; gap: 15px;
+}
+
+@mixin title {
+    font-size: 6.25rem;
+    font-family: $NeuzeitGro-Reg; 
+    font-weight: normal;
+    strong{font-family: $NeuzeitGro-Bold;display: block;}
+    margin-bottom: 25px;
+}
+@mixin sub-title {
+    font-size: 5rem;
+    font-family: $NeuzeitGro-Reg; 
+    font-weight: normal;
+    margin-bottom: 25px;
+    strong{font-family: $NeuzeitGro-Bold;display: block;}
+}
+
+@mixin text {
+    font-size: 1rem;font-family: $Montserrat-Reg;
+    color: $text-color; line-height: 25px;
+    text-align: justify; font-weight: 100;
+    @include flexbox; flex-direction: column;
+    grid-row: 20px;
+}
+

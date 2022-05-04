@@ -1,0 +1,29 @@
+.footer{
+    width: 100%; background-color: $black;
+    padding: 75px 50px;
+    .footer_row{
+        width: 100%; @include flexbox;
+        .footer__col{
+            width: 23%;flex: 0 0 23%;
+            .footer__title{
+                font-size: 1.375rem; color: $white;
+                font-family: $Montserrat-Bold; 
+                margin-bottom: 30px;
+            }
+            .footer-list{
+                &_item{margin-bottom: 20px;}
+                &_link{
+                    font-size: 1.25rem;text-decoration: none;
+                    color: $footer-link;font-family: $NeuzeitGro-Reg;
+                    padding: 10px 0;
+                    &:hover{color: $white;}
+                }
+            }
+        }
+        .footer-copyright{
+            width: 100%; text-align: right;
+            &_title{color: $white;font-size: 1.25rem;font-family: $NeuzeitGro-Reg;margin-bottom: 20px;}
+            &_text{color: $footer-link;font-size: 1.25rem;font-family: $NeuzeitGro-Reg;}
+        }
+    }
+}

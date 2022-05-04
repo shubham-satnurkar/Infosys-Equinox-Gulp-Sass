@@ -1,0 +1,75 @@
+.hero-slider{
+    width: 100%; background-color: $body-bg-color;
+    overflow: hidden;
+    padding: 150px 0 50px;
+    &__row{
+        @include flexbox;width: 100%;
+        justify-content: space-between; align-items: center;
+        .hero-slider__col1{
+            width:48%;flex:  0 0 48%;
+            padding: 20px 50px;
+            .heading{
+                .hero-title{
+                    @include title;
+                    animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
+                    // transform: translateX(-400px);
+                }
+                .hero-text{
+                    @include text; padding-right: 100px;
+                    animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
+                }
+                @keyframes move{
+                    0% { transform: translate3d(-400px, 0, 0);}
+                    80% { transform: translate3d(100px, 0, 0);}
+                    100% { transform: translate3d(0, 0, 0);}
+                }
+
+            }
+        }
+        .hero-slider__col2{
+            width: 50%;flex:  0 0 50%; text-align: center;
+            position: relative;
+            .main-img{
+                width: 100%; animation:zoomImg 1s linear  forwards ;
+            }
+            
+            .overlay-content{
+                position: absolute; top: 0; left: 0;height: 100%;
+                width: 100%;
+                .cir{
+                    width: 85px;height: 85px;
+                    background:linear-gradient(to bottom right, rgba(255,255,255,.5),rgba(255,255,255,8)) ;
+                    border-radius: 50%;position: absolute;
+                    animation:fadeIn 1s linear forwards ;
+                    @include flexbox;justify-content: center;
+                    .icon{width: 45%;} 
+                    &-search{top: 28%;left: 15%;animation-delay: .3s;}
+                    &-list{top: 2%;left: 25%;animation-delay: .5s;}
+                    &-cart{top: 10%;right: 22%;animation-delay: .75s;}
+                    &-mic{top: 35%;right: 17%;animation-delay: 1s;}  
+                }  
+                @keyframes fadeIn {
+                    from{transform: scale(0);opacity: 0;}
+                    to{transform: scale(1);opacity: 1;}
+                }              
+            }
+
+            @keyframes zoomImg {
+                from{width: 0;opacity: 0;}
+                to{ width:85% ;opacity: 1;}
+            }
+
+            .count{
+                width: 25%; position: absolute; bottom: 10%;
+                right: 0;
+                .text{
+                    font-size: 1.25rem;font-family: $NeuzeitGro-Bold;margin-bottom: 20px;
+                }
+                .number{
+                    font-size: 2rem;font-family: $NeuzeitGro-Reg;
+                    span{font-family: $NeuzeitGro-Bold;font-size: 2.5rem;}
+                }
+            }
+        }
+    }
+}

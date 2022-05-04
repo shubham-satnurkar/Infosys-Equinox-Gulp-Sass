@@ -1,0 +1,82 @@
+.header {
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 0 5px $shadow-color;
+    padding:20px 0 10px;
+    position: fixed; z-index: 999;
+
+    .navbar {
+        width: 100%;
+        @include flexbox;
+        justify-content: space-between;
+
+        &__brand {
+            width: 150px;margin-right: 20px;
+        }
+
+        &__toggler {
+            padding: 10px 15px;
+            background-color: transparent; border: none;
+            cursor: pointer; display: none;
+            .bar {
+                width: 30px; height: 2px; background-color: #000000;
+                margin: 6px 0;transition: 0.4s; z-index: 999;
+                display: block;
+            }
+
+            &.change{
+                .bar1{
+                    transform: rotate(-45deg) translate(-7px, 4px);
+                }
+                .bar2{opacity: 0;}
+                .bar3{
+                    transform: rotate(45deg) translate(-7px, -4px);
+                }
+            }
+        }
+
+        &__collapse{
+            .navbar__nav{
+                @include flexbox;
+                .nav-item{
+                    +.nav-item{margin-left: 10px;}
+                    &__link{
+                        text-decoration: none; text-transform: uppercase;
+                        font-size: .9rem; color: $navLink;
+                        font-family: $NeuzeitGro-Reg;
+                        padding: 10px; transition: .5s;
+                        letter-spacing: 1px; font-weight: 500;
+
+                        &:hover{background-color: $black;color: $white;}
+                    }   
+                }
+            }
+            
+        }
+    }
+
+    @media screen and (max-width:991px) {
+
+        .navbar{
+            &__toggler{display: block;position: relative;z-index: 10;}
+            &__collapse{
+                 transition:all 1s;
+                 position: fixed; top:94px; left: 100%; 
+                 background-color: $white; padding:100px 50px;
+                 width: 100%; height: 100vh; overflow-y: scroll;
+                 .navbar__nav{
+                     flex-direction: column;align-items: flex-start;
+
+                     .nav-item{
+                            + .nav-item{margin-left: 0;}
+                            margin-bottom: 20px;
+                         &__link{font-weight: 600;font-size: 1rem;}
+                     }
+                 }
+                &.active{left: 0;}
+
+
+            }
+        }
+    }
+}
