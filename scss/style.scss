@@ -15,6 +15,9 @@
 @import 'components/heroSlider';
 @import 'components/button';
 
+// Vendor Css
+@import 'vendor/slick';
+
 // Make Commerce human section start
 .commerce-human{
     width: 100%; background-color: $body-bg-color;
@@ -87,50 +90,8 @@
 }
 // Our Solution Section end
 
-// Our Customers Section Start
-.our-customer{
-    width: 100%; padding: 100px 0;
-    .our-customer__row{
-        width: 100%;@include flexbox; flex-direction: column;
-        .heading{
-            .sub-title{@include sub-title;
-                strong{display: inline;}
-            }
-        }
-        .tab{
-            @include flexbox; height:90px;
-            border-bottom: 2px solid #CCD7FA;;
-            .tab-btn{
-                background-color: transparent;border: 0;
-               padding: 10px 30px;
-               cursor: pointer;
-               .img-fluid{width: 75%;}
-                &.active{background-color: #CCD7FA;}
-                &.mobile{height: 85px;padding-bottom: 0;}
-            }
-        }
-        .our-customer__slider{
-            width: 100%; @include flexbox; justify-content: center;
-            padding: 20px;
-            .slider__col-1{
-                width: 40%;flex: 0 0 40%;
-            }
-            .slider__col-2{
-                width: 40%;flex: 0 0 40%;
-                .slide__info{
-                    .info__title{
-                        font-size: 2rem; font-family: $Montserrat-Bold;
-                    }
-                    .info__text{
-                        @include text; padding-right: 100px;
-                        margin: 30px 0;
-                    }
-                }
-            }
-        }
-    }
-}
-// Our Customers Section End
+// Our customer Slider
+@import 'components/customerSlider';
 
 // resources section start
 .resources{
@@ -174,46 +135,7 @@
 // resources section end
 
 //In the spotlight slider section start
-.spotlight-slider{
-    width: 100%;padding: 150px 50px;position: relative;
-    .dot,.cross{width: 10%;position: absolute;}
-    .dot{top: 5%;right: 3%;}
-    .cross{bottom: 10%;left: -3%;;
-        .img-fluid{transform: rotate(90deg);}
-    }
-    &_row{
-        width: 100%; @include flexbox; justify-content: center;
-        column-gap: 60px;
-        .heading{
-            text-align: center;width: 100%; margin-bottom: 30px;
-            .sub-title{
-                @include sub-title; 
-                strong{display: inline;}
-            }
-        }
-
-        .spotlight-slider_col{
-            width: 28%; flex:0 0 28%;;
-            .spotlight-slider__card{
-                width: 100%; height: auto;
-                padding: 20px 0; text-align: center;
-                .card-cir{
-                    width: 150px;height: 150px;
-                    background:linear-gradient($cir-gradient);
-                    border-radius: 50%; margin: 10px auto 30px;
-                }
-                .card-body{
-                    padding: 20px;
-                    .card-title{font-size: 1.25rem;font-family: $Montserrat-Bold;line-height: 30px;}
-                    .card-text{@include text;text-align: center;margin: 20px 0;}
-                }
-                .black-btn{
-                    display: block; text-decoration: none;
-                }
-            }
-        }
-    }
-}
+@import 'components/spotlightSlider';
 //In the spotlight slider section end
 
 // Layout Css

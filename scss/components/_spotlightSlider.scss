@@ -1,0 +1,45 @@
+//In the spotlight slider section start
+.spotlight-slider{
+    width: 100%;padding: 150px 50px;position: relative;
+    .dot,.cross{width: 10%;position: absolute;}
+    .dot{top: 5%;right: 3%;}
+    .cross{bottom: 10%;left: -3%;;
+        .img-fluid{transform: rotate(90deg);}
+    }
+    .heading{
+        text-align: center;width: 100%; margin-bottom: 30px;
+        .sub-title{
+            @include sub-title; 
+            strong{display: inline;}
+        }
+    }
+    &_row{
+        width: 100%; @include flexbox; justify-content: center;
+        column-gap: 60px; height: 100%; position: relative;
+
+        .spotlight-slider_col{
+            width: 28%; flex:0 0 28%;;
+            .spotlight-slider__card{
+                width: 100%; height: auto;
+                padding: 20px 0; text-align: center;
+                .card-cir{
+                    width: 150px;height: 150px;
+                    background:linear-gradient($cir-gradient);
+                    border-radius: 50%; margin: 10px auto 30px;
+                }
+                .card-body{
+                    padding: 20px;
+                    .card-title{font-size: 1.25rem;font-family: $Montserrat-Bold;line-height: 30px;}
+                    .card-text{@include text;text-align: center;margin: 20px 0;}
+                }
+                .black-btn{
+                    display: block; text-decoration: none;
+                }
+            }
+        }
+        .slick-next, .slick-prev{top: unset;bottom: -50px;}
+        .slick-prev {left: 43%;}
+        .slick-next {right: 47%;}
+    }
+}
+//In the spotlight slider section end

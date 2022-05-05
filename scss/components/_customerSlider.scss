@@ -1,0 +1,52 @@
+// Our Customers Section Start
+.our-customer{
+    width: 100%; padding: 100px 0;
+    
+    .our-customer__row{
+        width: 100%;@include flexbox; flex-direction: column;
+        .heading{
+            .sub-title{@include sub-title;
+                strong{display: inline;}
+            }
+        }
+        .tab{
+            @include flexbox; height:90px;
+            border-bottom: 2px solid #CCD7FA;;
+            .tab-btn{
+                background-color: transparent;border: 0;
+               padding: 10px 30px;
+               cursor: pointer;
+               .img-fluid{width: 75%;}
+                &.active{background-color: #CCD7FA;}
+                &.mobile{height: 85px;padding-bottom: 0;}
+            }
+        }
+
+        #customerSlider{
+            width: 100%;position: relative;
+            .our-customer__slider{
+                width: 100%; @include flexbox; justify-content: center;
+                padding: 20px;
+                .slider__col-1{
+                    width: 40%;flex: 0 0 40%;
+                }
+                .slider__col-2{
+                    width: 40%;flex: 0 0 40%;
+                    .slide__info{
+                        .info__title{
+                            font-size: 2rem; font-family: $Montserrat-Bold;
+                        }
+                        .info__text{
+                            @include text; padding-right: 100px;
+                            margin: 30px 0;
+                        }
+                    }
+                }
+            }
+
+            .slick-prev {left: 30px;}
+            .slick-next {right: 80px;}
+        }
+    }
+}
+// Our Customers Section End

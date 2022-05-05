@@ -1,3 +1,4 @@
+// Comman blue color button use in page.
 .btn {
     padding: 15px 20px;
     background-color: $tab-color;
@@ -17,6 +18,7 @@
     }
 }
 
+// black color button use for download
 .black-btn{
     background-color: $black;color: $white;
     font-size: 1rem; font-family: $NeuzeitGro-Reg;
@@ -24,4 +26,34 @@
     border: none; cursor: pointer;text-decoration: none;
     transition: transform 1s; transform: scale(.9);
     &:hover{transform: scale(1);}
+}
+
+
+// scroll up animation button
+#scrollUp{
+    padding: 20px 18px;
+    border-radius: 50%; border: 0;
+    background-color: $blue-color;
+    position: fixed; bottom: 20px;
+    right: -100px; z-index: 10000; cursor: pointer;
+    box-shadow: 0 0 10px $shadow-color;
+    transition: all .5s;
+
+    &::before{
+        content: '';
+        background: url(../../assets/img/up-arrow.svg) no-repeat center;
+        padding: 10px;
+        
+    }
+    &:hover{background-color: $navy-blue;}
+    &:hover{animation: moveup 1s linear  infinite ;}
+
+    &.show{
+        display: inline-block; right: 20px;
+    }
+}
+@keyframes moveup {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0px);}
 }

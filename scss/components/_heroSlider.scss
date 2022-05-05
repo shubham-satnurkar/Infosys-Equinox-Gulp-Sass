@@ -1,28 +1,33 @@
 .hero-slider{
-    width: 100%; background-color: $body-bg-color;
+    width: 100%; background-color: $body-bg-color; position: relative;
     overflow: hidden;
     padding: 150px 0 50px;
+    #heroSlider{
+        width: 100%;position: relative; height: 100%;
+        .slick-next, .slick-prev{top: 95%}
+        .slick-prev {left: 35px;}
+        .slick-next {left: 135px;}
+    }
     &__row{
-        @include flexbox;width: 100%;
+        @include flexbox;width: 100%;flex-wrap: nowrap;
         justify-content: space-between; align-items: center;
         .hero-slider__col1{
             width:48%;flex:  0 0 48%;
-            padding: 20px 50px;
+            padding: 20px 30px; overflow: hidden;
             .heading{
                 .hero-title{
                     @include title;
                     animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
-                    // transform: translateX(-400px);
                 }
                 .hero-text{
                     @include text; padding-right: 100px;
                     animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
                 }
-                @keyframes move{
-                    0% { transform: translate3d(-400px, 0, 0);}
-                    80% { transform: translate3d(100px, 0, 0);}
-                    100% { transform: translate3d(0, 0, 0);}
-                }
+                // @keyframes move{
+                //     0% { transform: translate3d(-400px, 0, 0);}
+                //     80% { transform: translate3d(100px, 0, 0);}
+                //     100% { transform: translate3d(0, 0, 0);}
+                // }
 
             }
         }
@@ -56,20 +61,22 @@
 
             @keyframes zoomImg {
                 from{width: 0;opacity: 0;}
-                to{ width:85% ;opacity: 1;}
+                to{ width:100% ;opacity: 1;}
             }
 
-            .count{
-                width: 25%; position: absolute; bottom: 10%;
-                right: 0;
-                .text{
-                    font-size: 1.25rem;font-family: $NeuzeitGro-Bold;margin-bottom: 20px;
-                }
-                .number{
-                    font-size: 2rem;font-family: $NeuzeitGro-Reg;
-                    span{font-family: $NeuzeitGro-Bold;font-size: 2.5rem;}
-                }
-            }
+        }
+        &.slick-slide{display: flex;}
+
+    }
+    .count{
+        width: 15%; position: absolute; bottom: 10%;
+        right: 0; text-align: center;
+        .text{
+            font-size: 1.25rem;font-family: $NeuzeitGro-Bold;margin-bottom: 20px;
+        }
+        .number{
+            font-size: 2rem;font-family: $NeuzeitGro-Reg;
+            .active{font-family: $NeuzeitGro-Bold;font-size: 2.5rem;}
         }
     }
 }

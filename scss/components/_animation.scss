@@ -1,0 +1,55 @@
+.animatable{
+    visibility: hidden;
+    animation-play-state: paused;
+}
+.animated{
+    visibility: visible;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-play-state: running;
+    
+    &.bounceInLeft{animation-name: bounceInLeft;}
+}
+
+// Bounce In From Left
+
+@keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+
+	60% {
+		transform: translateX(20px);
+	}
+
+	80% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+// Bounce In From Right
+@keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+
+	60% {
+		transform: translateX(-20px);
+	}
+
+	80% {
+		transform: translateX(5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
