@@ -17,11 +17,11 @@
             .heading{
                 .hero-title{
                     @include title;
-                    animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
+                    // animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
                 }
                 .hero-text{
                     @include text; padding-right: 100px;
-                    animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
+                    // animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
                 }
                 // @keyframes move{
                 //     0% { transform: translate3d(-400px, 0, 0);}
@@ -35,7 +35,8 @@
             width: 50%;flex:  0 0 50%; text-align: center;
             position: relative;
             .main-img{
-                width: 100%; animation:zoomImg 1s linear  forwards ;
+                width: 100%; 
+               &.zoomIn{animation:zoomImg 1s linear  forwards ;}
             }
             
             .overlay-content{

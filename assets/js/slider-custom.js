@@ -36,6 +36,14 @@ function sliderInit() {
     var sliderItemsNum = $(this).find('.slick-slide').not('.slick-cloned').length;
     $sliderParent.find('.number .total').html(helpers.addZeros(sliderItemsNum));
 
+    $('.slick-next').on('click', function(){
+      // $('.slick-active .main-img').addClass('zoomIn');
+      $('.slick-active .main-img, .slick-active .overlay-content').addClass('bounceInRight');
+      $('.slick-active .heading').addClass('bounceInLeft');
+      $('.slick-active .card-body').addClass('moveUp');
+
+    })
+
   });
   
 

@@ -206,8 +206,7 @@ body.overflow {
         font-size: 6.25rem;
         font-family: NeuzeitGro-Reg;
         font-weight: normal;
-        margin-bottom: 25px;
-        animation: move 1200ms ease-in .2s 2 forwards alternate-reverse; }
+        margin-bottom: 25px; }
         .hero-slider__row .hero-slider__col1 .heading .hero-title strong {
           font-family: NeuzeitGro-Bold;
           display: block; }
@@ -226,16 +225,16 @@ body.overflow {
         gap: 15px;
         flex-direction: column;
         grid-row: 20px;
-        padding-right: 100px;
-        animation: move 1200ms ease-in .2s 2 forwards alternate-reverse; }
+        padding-right: 100px; }
     .hero-slider__row .hero-slider__col2 {
       width: 50%;
       flex: 0 0 50%;
       text-align: center;
       position: relative; }
       .hero-slider__row .hero-slider__col2 .main-img {
-        width: 100%;
-        animation: zoomImg 1s linear  forwards; }
+        width: 100%; }
+        .hero-slider__row .hero-slider__col2 .main-img.zoomIn {
+          animation: zoomImg 1s linear  forwards; }
       .hero-slider__row .hero-slider__col2 .overlay-content {
         position: absolute;
         top: 0;
@@ -373,6 +372,148 @@ body.overflow {
     transform: translateY(-10px); }
   100% {
     transform: translateY(0px); } }
+
+.animatable {
+  visibility: hidden;
+  animation-play-state: paused; }
+
+.animated {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+  animation-play-state: running; }
+  .animated.bounceInLeft {
+    animation-name: bounceInLeft; }
+  .animated.bounceInRight {
+    animation-name: bounceInRight; }
+  .animated.bounceInZoom {
+    animation-name: bounceInZoom; }
+  .animated.moveUp {
+    animation-name: moveUp; }
+  .animated.Up {
+    animation-name: Up; }
+  .animated.moveDown {
+    animation-name: moveDown; }
+  .animated.fadeInUp {
+    animation-name: fadeInUp; }
+  .animated.fadeInDown {
+    animation-name: fadeInDown; }
+  .animated.topLeft {
+    animation-name: topLeft; }
+  .animated.topRight {
+    animation-name: topRight; }
+  .animated.bottomLeft {
+    animation-name: bottomLeft; }
+  .animated.bottomRight {
+    animation-name: bottomRight; }
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px); }
+  60% {
+    transform: translateX(20px); }
+  80% {
+    transform: translateX(-5px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px) scale(0); }
+  60% {
+    transform: translateX(-20px) scale(0.3); }
+  80% {
+    transform: translateX(5px) scale(0.6); }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1); } }
+
+@keyframes bounceInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.3); }
+  50% {
+    transform: scale(1.1); }
+  70% {
+    transform: scale(0.9); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes Up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) rotate(90deg); }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(90deg); } }
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes topLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, -100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes topRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px, -100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes bottomLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes bottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px, 100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
 
 .slick-next, .slick-prev {
   font-size: 0px;
