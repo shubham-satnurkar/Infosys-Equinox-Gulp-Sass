@@ -58,7 +58,21 @@
     @media screen and (max-width:1366px){
         .navbar{
             &__collapse{
-                .nav-item{margin-left: 0!important;}
+                .navbar__nav{
+                    .nav-item + .nav-item{margin-left: 0;}
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1140px){
+        .navbar{
+            &__collapse{
+                .navbar__nav{
+                    .nav-item{
+                        &__link{font-size: .875rem;padding: 10px 4px;}
+                    }
+                }
             }
         }
     }
@@ -82,8 +96,6 @@
                      }
                  }
                 &.active{left: 0;}
-
-
             }
         }
     }

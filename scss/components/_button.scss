@@ -68,3 +68,24 @@
         &::before{padding: 8px;}
     }
 }
+
+@media screen and (max-width:991px){
+    .btn{font-size: 1rem;padding: 10px 7px;margin: 5px 5px 5px 0;}
+    .black-btn{padding: 12px 15px; margin: auto; font-size: .8rem; width: 100%;}
+}
+
+@media screen and (max-width:575px) {
+    #scrollUp{
+        padding: 10px 12px;
+        &::before{padding: 5px;}
+    }
+}
+
+@media screen and (max-width:425px) {
+    .btn{font-size: .8rem; padding: 10px 15px;}
+    .black-btn{padding: 12px 15px; font-size: .8rem;}
+    #scrollUp{
+        padding: 10px 12px;
+        &::before{padding: 5px;}
+    }
+}

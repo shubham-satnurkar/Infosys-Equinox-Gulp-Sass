@@ -42,3 +42,17 @@
         background-color: $blue-color;
     }
 }
+
+@media screen and (max-width:767px) {
+    .slick-prev:before, .slick-next:before{
+        background-size: 20%;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .slick-prev:before, .slick-next:before{
+        background-size: 20%;
+        padding: 5px 15px;
+    }
+}

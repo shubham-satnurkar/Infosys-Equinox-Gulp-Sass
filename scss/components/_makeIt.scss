@@ -66,3 +66,20 @@
         }
     }
 }
+
+@media screen  and (max-width:767px){
+    .makeIt{
+        .makeIt__row{
+            .block{
+                .block__row{
+                    .block__col1{
+                        width: 100%;flex: 0 0 100%;
+                    }
+                    .block__col2{
+                        width: 100%;flex: 0 0 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -50,5 +50,90 @@
             .slick-next {right: 80px;}
         }
     }
+
+    @media screen and (max-width:767px) {
+        .our-customer__row{
+            .tab{
+               flex-wrap: nowrap; height: 60px;
+                border-bottom: 2px solid #CCD7FA;;
+                .tab-btn{
+                    background-color: transparent;border: 0;
+                   padding: 10px 20px;
+                   cursor: pointer;
+                   .img-fluid{width: 50%;}
+    
+                    &.mobile{height: 60px;padding-bottom: 0;}
+                }
+            }
+
+            #customerSlider{
+                width: 100%;position: relative;
+                .our-customer__slider{
+                    width: 100%; @include flexbox; justify-content: center;
+                    padding: 20px;
+                    .slider__col-1{
+                        width: 40%;flex: 0 0 40%;
+                    }
+                    .slider__col-2{
+                        width: 40%;flex: 0 0 40%;
+                        .slide__info{
+                            .info__title{
+                                font-size: 1.375rem;
+                            }
+                            .info__text{
+                               padding-right: 0px;
+                                margin: 15px 0;
+                            }
+                        }
+                    }
+                }
+    
+                .slick-prev {left: 5px;}
+                .slick-next {right: 25px;}
+            }
+        }
+    }
+
+    @media screen and (max-width:575px) {
+        padding: 50px 0;
+        .our-customer__row{
+            .heading{
+                .sub-title{text-align: center; }
+            }
+            .tab{
+                .tab-btn{
+                    background-color: transparent;border: 0;
+                   padding: 10px 20px;
+                   cursor: pointer;
+                   .img-fluid{width: 75%;}
+                }
+            }
+
+            #customerSlider{
+                width: 100%;position: relative;
+                .our-customer__slider{
+                    flex-direction: column; text-align: center;
+                    .slider__col-1{
+                        width: 75%;flex: 0 0 75%;
+                    }
+                    .slider__col-2{
+                        width: 100%;flex: 0 0 100%;
+                        .slide__info{
+                            .info__title{
+                                font-size: 1.375rem;
+                            }
+                            .info__text{
+                               padding-right: 0px;
+                                margin: 15px 0;
+                            }
+                        }
+                    }
+                }
+    
+                .slick-prev {left: 5px;}
+                .slick-next {right: 25px;}
+            }
+        }
+    }
 }
 // Our Customers Section End
