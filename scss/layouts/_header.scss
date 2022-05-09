@@ -54,6 +54,14 @@
             
         }
     }
+    
+    @media screen and (max-width:1366px){
+        .navbar{
+            &__collapse{
+                .nav-item{margin-left: 0!important;}
+            }
+        }
+    }
 
     @media screen and (max-width:991px) {
 

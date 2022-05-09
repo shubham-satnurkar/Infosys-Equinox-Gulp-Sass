@@ -41,5 +41,24 @@
         .slick-prev {left: 43%;}
         .slick-next {right: 47%;}
     }
+
+    @media screen and (max-width:1366px) {
+        .spotlight-slider_row{
+            .spotlight-slider_col{
+                .card-cir{
+                    width: 120px;height: 120px; 
+                    margin-bottom: 10px;
+                }
+                .card-body{
+                    padding: 20px;
+                    .card-title{font-size: 1.125rem;font-family: $Montserrat-Bold;line-height: 25px;}
+                    .card-text{margin: 10px 0;}
+                }
+            }
+        }
+        .slick-prev {left: 44%;}
+        .slick-next {right: 48%;}
+    }
 }
 //In the spotlight slider section end
+

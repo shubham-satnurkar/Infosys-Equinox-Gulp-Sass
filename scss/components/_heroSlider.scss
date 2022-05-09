@@ -17,17 +17,10 @@
             .heading{
                 .hero-title{
                     @include title;
-                    // animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
                 }
                 .hero-text{
                     @include text; padding-right: 100px;
-                    // animation: move 1200ms ease-in .2s 2 forwards alternate-reverse;
                 }
-                // @keyframes move{
-                //     0% { transform: translate3d(-400px, 0, 0);}
-                //     80% { transform: translate3d(100px, 0, 0);}
-                //     100% { transform: translate3d(0, 0, 0);}
-                // }
 
             }
         }
@@ -70,14 +63,52 @@
 
     }
     .count{
-        width: 15%; position: absolute; bottom: 10%;
-        right: 0; text-align: center;
+        width: 15%; position: absolute; bottom: 5%;
+        right: 15px; text-align: center;
         .text{
             font-size: 1.25rem;font-family: $NeuzeitGro-Bold;margin-bottom: 20px;
         }
         .number{
             font-size: 2rem;font-family: $NeuzeitGro-Reg;
             .active{font-family: $NeuzeitGro-Bold;font-size: 2.5rem;}
+        }
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .hero-slider{
+        #heroSlider{
+            width: 100%;position: relative; height: 100%;
+            .slick-next, .slick-prev{top: 85%}
+            .slick-prev {left: 30px;}
+            .slick-next {left: 120px;}
+        }
+        &__row{
+            .hero-slider__col2{
+                width: 50%;flex:0 0 50%;
+                .main-img{width: 90%;}
+                .overlay-content{
+                    .cir{
+                        width: 75px;height: 75px;
+                        .icon{width: 35%;}
+                        &-search{top: 28%;left: 10%;    }
+                        &-list{top: 2%;left: 20%;}
+                        &-cart{top: 5%;right: 30%;}
+                        &-mic{top: 30%;right: 20%;}
+                    }
+                }
+            }
+        }
+        .count{
+            width: 14%; position: absolute; bottom: 15%;
+            right: 15px; text-align: center;
+            .text{
+                font-size: 1.125rem;font-family: $NeuzeitGro-Bold;margin-bottom: 20px;
+            }
+            .number{
+                font-size: 1.5rem;font-family: $NeuzeitGro-Reg;
+                .active{font-family: $NeuzeitGro-Bold;font-size: 2rem;}
+            }
         }
     }
 }

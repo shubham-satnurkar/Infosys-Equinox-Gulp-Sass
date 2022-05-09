@@ -19,18 +19,26 @@
 
 .slick-prev:before {
     content: '';
-    background: url(../../assets/img/left-arrow.svg) no-repeat center;
+    background: url(../../app/img/left-arrow.svg) no-repeat center;
 }
 
 
 .slick-next:before {
     content: '';
-    background: url(../../assets/img/right-arrow.svg) no-repeat center;
+    background: url(../../app/img/right-arrow.svg) no-repeat center;
 }
 
 .slick-prev:before, .slick-next:before{
-    // width: 50px;height: 50px;
     background-size: 20%;
     padding: 25px 35px;border-radius: 50%;
     background-color: $blue-color;
+}
+
+
+@media screen and (max-width:1366px) {
+    .slick-prev:before, .slick-next:before{
+        background-size: 20%;
+        padding: 15px 25px;border-radius: 50%;
+        background-color: $blue-color;
+    }
 }

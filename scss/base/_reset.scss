@@ -52,5 +52,17 @@ table {
 body{overflow-x: hidden;}
 body.overflow{overflow: hidden;}
 .container-fluid{width: 100%;padding: 0 15px;}
-.container{max-width: 1640px;padding: 0 20px;margin: auto;}
+// .container{min-width: 1367px;padding: 0 20px;margin: auto;}
 .img-fluid{width: 100%;}
+// .container{max-width: 1366px;padding: 0 20px;margin: auto;}
+
+
+@media screen and (min-width:1367px) and (max-width:1920px){
+	.container{min-width: 1367px;padding: 0 20px;margin: auto;}
+	// .container-fluid{min-width: 1367px;padding: 0 15px;margin: auto;}
+}
+
+@media screen and (max-width:1366px){
+	.container{max-width: 1366px;padding: 0 20px;margin: auto;}
+	.container-fluid{max-width: 1366px;padding: 0 20px;margin: auto;}
+}

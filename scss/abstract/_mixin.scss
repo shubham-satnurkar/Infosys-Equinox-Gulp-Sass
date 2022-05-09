@@ -10,13 +10,21 @@
     font-weight: normal;
     strong{font-family: $NeuzeitGro-Bold;display: block;}
     margin-bottom: 25px;
+
+    @media screen and (max-width:1366px) {
+        font-size: 4.5rem; margin-bottom: 20px;
+    }
 }
 @mixin sub-title {
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: $NeuzeitGro-Reg; 
     font-weight: normal;
     margin-bottom: 25px;
     strong{font-family: $NeuzeitGro-Bold;display: block;}
+
+    @media screen and (max-width:1366px) {
+        font-size: 4.25rem; margin-bottom: 20px;
+    }
 }
 
 @mixin text {
@@ -25,5 +33,9 @@
     text-align: justify; font-weight: 100;
     @include flexbox; flex-direction: column;
     grid-row: 20px;
+
+    @media screen and (max-width:1366px) {
+        font-size: .9rem;
+    }
 }
 

@@ -48,5 +48,34 @@ $(document).ready(function(){
 
     $(window).on('scroll', animations);
     $(window).trigger('scroll');
+
+
+    // Customer Slider tab menu
+    let $info1 = $('.info1');
+    let $info2 = $('.info2').hide();
+    let $img1 = $('.slide .img1');
+    let $img2 = $('.slide .img2').hide();
+    let $youngLiving = $('.youngLiving');
+    let $mobile = $('.mobile');
+
+    $youngLiving.on('click', function(){
+        $(this).addClass('active')
+        $mobile.removeClass('active')
+        $info1.hide();
+        $info2.show();
+        $img1.hide();
+        $img2.show();
+    });
+    $mobile.on('click', function(){
+        $(this).addClass('active')
+        $youngLiving.removeClass('active')
+        $info1.show();
+        $info2.hide();
+        $img1.show();
+        $img2.hide();
+    });
+
+
+
     
 });

@@ -42,6 +42,20 @@
             }
         }
     }
+
+    @media screen  and (max-width:1366px){
+        .commerce-human__row{
+            .commerce-human_col2{
+                .heading{
+                    .sub-title{padding-right: 50px;}
+                }
+                .botton-tabs{
+                    margin: 20px 0 0;
+                    .tab__title{font-size: 1.25rem;}
+                }
+            }
+        }
+    }
 }
 // Make Commerce human section end
 
@@ -59,7 +73,7 @@
             @include flexbox; justify-content: space-evenly;
             gap: 50px;
             .our-solution__category{
-                text-align: center;
+                text-align: center; margin: auto;
                 .category__cir{
                     width: 200px;height: 200px;
                     background-color: $white;border-radius: 50%;
@@ -88,6 +102,21 @@
     }
     .dot{position: absolute;width: 20%;top: 5%;left: 5%;}
     .cross{position: absolute;width: 10%;bottom: 5%;right: 5%;}
+
+
+    @media screen and (max-width:1366px) {
+        .our-solution__row{
+            .our-solution__col1{
+                gap: 30px;
+                .our-solution__category{
+                    .category__cir{
+                        width: 150px;height: 150px;
+                    }
+                    .category__title{font-size: 1.125rem}
+                }
+            }
+        }
+    }
 }
 // Our Solution Section end
 
@@ -132,6 +161,30 @@
             }
         }
     }
+
+    @media screen and (max-width:1366px) {
+        .resources__row{
+            .resources__col-1{
+                .img-fluid{width: 75%;margin-bottom: 20px;}
+            }
+            .resources__col-2{
+                .resource-media{
+                    margin-bottom: 30px;
+                    .media__images{
+                        width: 30%;flex: 0 0 30%;margin-right: 30px;
+                    }
+                    .media__content{
+                        &_title{
+                            font-size: 1.125rem;line-height: 25px;
+                        }
+                        &_text{line-height: 20px}
+                        
+                    }
+                }
+            }
+        }
+    }
+
 }
 // resources section end
 

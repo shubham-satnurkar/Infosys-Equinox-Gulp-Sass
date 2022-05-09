@@ -17,6 +17,8 @@
                padding: 10px 30px;
                cursor: pointer;
                .img-fluid{width: 75%;}
+
+               &:hover{background-color: #CCD7FA;}
                 &.active{background-color: #CCD7FA;}
                 &.mobile{height: 85px;padding-bottom: 0;}
             }
